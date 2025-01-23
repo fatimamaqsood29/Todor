@@ -33,17 +33,17 @@ function App() {
         <h1 className="text-4xl font-bold mb-6 text-center text-gray-700">To-Do List</h1>
 
         {/* Input Field and Add Button */}
-        <div className="flex items-center gap-4 mb-4 mr-5">
+        <div className="flex items-center gap-4 mb-4 mr-5 pr-4">
           <input
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Enter task..."
-            className="border border-gray-300 rounded-lg p-3 w-full text-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="border border-gray-300 rounded-lg p-3 w-full text-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mr-5" 
           />
           <button
             onClick={handleAddOrUpdate}
-            className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg shadow-md transition-transform transform active:scale-95"
+            className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg shadow-md transition-transform transform active:scale-95 "
           >
             {editId ? <FaCheck size={12} /> : <FaPlus size={12} />}
           </button>
@@ -52,7 +52,7 @@ function App() {
         {/* Task List aligned with input field */}
         <ul className="flex flex-col ">
           {todos.map((todo) => (
-            <li key={todo.id} className="flex items-center border border-gray-300 rounded-lg p-3 shadow-md w-full">
+            <li key={todo.id} className="flex items-center border border-gray-300 rounded-lg  shadow-md w-full">
               <input
                 type="checkbox"
                 checked={todo.completed}
