@@ -50,7 +50,7 @@ function App() {
               >
                 {todo.text}
               </span>
-              <div className="flex gap-2">
+              {/* <div className="flex gap-2"> */}
                 <button
                   className="text-green-500"
                   onClick={() => {
@@ -69,7 +69,7 @@ function App() {
                 >
                   <FaTrash />
                 </button>
-              </div>
+              
             </li>
           ))}
         </ul>
